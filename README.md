@@ -4,6 +4,8 @@
 
 Welcome to the Luceor Multi-Tenancy System repository. 🚀 This is a versatile B2B application built with Spring and Angular, designed to simplify service management, client data handling, equipment tracking, and ensure secure user access. 🔐
 
+**Note**: This project was developed as part of an internship at [Luceor](https://luceor.com/), a leading company in the field.
+
 ## Key Features
 
 - **Streamlined Service Management**: Easily order and manage services. 📦
