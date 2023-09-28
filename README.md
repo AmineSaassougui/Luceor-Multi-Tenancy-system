@@ -14,8 +14,13 @@ Welcome to the Luceor Multi-Tenancy System repository. 🚀 This is a versatile 
 
 ## Technologies Used
 
-- **Backend**: Spring framework for robust server-side operations. 🌱
-- **Frontend**: Angular for an interactive and responsive user interface. 🖥️
+- **Backend**: Spring framework for robust server-side operations. 
+  ![Spring Logo](![image](https://github.com/AmineSaassougui/Luceor-Multi-Tenancy-system/assets/93150838/6549275e-6f54-4b7f-b7bd-49430c062a06)
+) 🌱
+  
+- **Frontend**: Angular for an interactive and responsive user interface. 
+  ![Angular Logo](angular_logo_url) 🖥️
+  
 - **Database**: MySQL for data storage. 🗃️
 
 ## Getting Started
