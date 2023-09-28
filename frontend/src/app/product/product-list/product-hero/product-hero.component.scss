@@ -1,0 +1,13 @@
+._hero {
+  &__content {
+    background: linear-gradient(to bottom, #181caf, #9494ce); /* Use linear gradient for background */
+    position: relative;
+  }
+  &__particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

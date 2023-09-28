@@ -1,0 +1,61 @@
+<div>
+  <div class="filter flex items-center mb-5">
+    <h5>ADMIN products</h5>
+    <div class="flex items-center ml-auto">
+      <button [class.text-accent]="view === 'grid'" (click)="view = 'grid'" mat-icon-button class="view__btn"><mat-icon>grid_view</mat-icon></button>
+      <button [class.text-accent]="view === 'list'" (click)="view = 'list'" mat-icon-button class="view__btn"><mat-icon>list_alt</mat-icon></button>
+    </div>
+  </div>
+  <div>
+    <div *ngIf="view === 'list'" class="table-inside">
+      <div class="flex flex-col border ltLg:responsive">
+        <div class="flex items-center p-4 border-b hover:bg-blue-100" *ngFor="let product of products | slice: 0:9">
+          <div class="w-6/12 font-medium">
+            <div class="pl-16 ml-3">
+              <a href="/products" class="flex hover:text-blue-700">
+                <div class="max-h-16 w-16 flex-none mr-3 border" *ngIf="product.imageUrl">
+                  <img [src]="product.imageUrl" alt="img">
+                </div>
+                <h6 class="flex-auto">{{ product?.name }}</h6>
+              </a>
+            </div>
+          </div>
+          <div class="w-2/12 text-center">${{ product?.price }}</div>
+          <div class="w-1/12 text-center">{{ product?.status }}</div>
+          <div class="w-1/12 text-center">{{ product?.quantity }}</div>
+          <div class="w-2/12">
+            <!-- Add a Delete button and call onDeleteRouter method on click -->
+            <button class="action_icon__btn" mat-icon-button (click)="DeleteRouter(product.idR)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-12 gap-4" *ngIf="view === 'grid'">
+      <div class="col-span-4" *ngFor="let product of products | slice: 0:9">
+        <mat-card>
+          <img class="m-0 mb-4" mat-card-image [src]="product.imageUrl" alt="Product Image" />
+          <mat-card-header class="mx-0">
+            <h3 class="text-[15px] leading-[23px]">{{ product?.name }}</h3>
+          </mat-card-header>
+          <mat-card-actions>
+            <a mat-stroked-button [routerLink]="['/products', product.idR]" class="px-5">View</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Confirmation Dialog -->
+<div class="blurred-background" *ngIf="showConfirmation">
+  <!-- Confirmation Dialog -->
+  <div class="confirmation-dialog-content">
+    <p>Are you sure you want to delete this router?</p>
+    <div class="confirmation-buttons">
+      <button mat-flat-button class="blue-button" (click)="confirmDelete()">Yes</button>
+      <button mat-flat-button color="warn" (click)="cancelDelete()">No</button>
+    </div>
+  </div>
+</div>

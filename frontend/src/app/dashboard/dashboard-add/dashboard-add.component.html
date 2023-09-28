@@ -1,0 +1,22 @@
+<div class="router-form-container">
+  <h2 class="router-form-title">Add New Router</h2>
+  <form (ngSubmit)="onSubmit()" class="router-form">
+    <div class="form-group">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="routerData.name" class="form-input" required>
+    </div>
+    <div class="form-group">
+      <label for="description" class="form-label">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="routerData.description" class="form-input" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="price" class="form-label">Price:</label>
+      <input type="number" id="price" name="price" [(ngModel)]="routerData.price" class="form-input" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity" class="form-label">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" [(ngModel)]="routerData.quantity" class="form-input" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Router</button>
+  </form>
+</div>

@@ -1,0 +1,90 @@
+<div>
+  <h5 class="mb-3 font-medium">My Recent Rentals</h5>
+  <div class="table-inside">
+    <table class="order-table table-auto ltMd:responsive">
+      <thead>
+      <tr class="border text-left">
+        <th>
+          <span class="text-gray-800">ID</span>
+        </th>
+        <th>
+          <span class="text-gray-800">Router Name</span>
+        </th>
+        <th>
+          <span class="text-gray-800">Price</span>
+        </th>
+        <th>
+          <span class="text-gray-800">Rental Date</span>
+        </th>
+        <th>
+          <span class="text-gray-800">Client Id</span>
+        </th>
+        <th>
+          <span class="text-gray-800">Client Name</span>
+        </th>
+        <th>
+          <span class="text-gray-800">From Admin Name</span>
+        </th>
+        <th>
+          <span class="text-gray-800">Admin Id</span>
+        </th>
+        <th>
+          <span class="text-gray-800">End Date</span>
+        </th>
+        <th class="text-right">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let summary of rentalSummaries" class="border">
+        <ng-container *ngIf="summary?.routerAdminName === userInfo?.username">
+          <!-- Only display rows where routerAdminName matches userInfo.username -->
+          <td>
+            <a class="text-blue-700" href="/">#{{ summary?.id }}</a>
+          </td>
+          <td>
+            {{ summary?.routerName }}
+          </td>
+          <td>
+            <span>${{ summary?.routerPrice }}</span>
+          </td>
+          <td>
+            <span>{{ summary?.rentalDate | date }}</span>
+          </td>
+          <td>
+            <a class="text-blue-700" href="/">#{{ summary?.userId }}</a>
+          </td>
+          <td>
+            <span>{{ summary?.username }}</span>
+          </td>
+          <td>
+            <span>{{ summary?.routerAdminName }}</span>
+          </td>
+          <td>
+            <a class="text-blue-700" href="/">#{{ summary?.routerAdminId }}</a>
+          </td>
+          <td>
+            <!-- Calculate the end date (rental date + 30 days) -->
+            <span>{{ calculateEndDate(summary?.rentalDate) | date }}</span>
+          </td>
+          <td class="text-right">
+            <button class="action_icon__btn" mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xposition="before">
+              <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Details</span>
+              </button>
+              <button mat-menu-item (click)="deleteRental(summary.id)">
+                <mat-icon>delete</mat-icon>
+                <span>Delete</span>
+              </button>
+
+            </mat-menu>
+          </td>
+        </ng-container>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="filter flex items-center mb-5">
+    <h2>Users</h2>
+  </div>
+  <div class="table-inside">
+    <div class="flex flex-col border ltLg:responsive">
+      <div class="flex items-center p-4 border-b hover:bg-blue-100">
+        <div class="w-3/12 font-medium text-left pl-4">ID</div>
+        <div class="w-3/12 font-medium text-left pl-4">Name</div>
+        <div class="w-2/12 font-medium text-center"><mat-icon>email</mat-icon></div>
+        <div class="w-1/12 font-medium text-center"><mat-icon>phone</mat-icon></div>
+        <div class="w-1/12 font-medium text-center">Role</div>
+        <div class="w-2/12 font-medium text-center">Status</div>
+      </div>
+      <div class="flex items-center p-4 border-b hover:bg-blue-100" *ngFor="let user of users">
+        <div class="w-3/12">{{ user.id }}</div>
+        <div class="w-3/12">{{ user.name }}</div>
+        <div class="w-2/12 text-center">{{ user.email }}</div>
+        <div class="w-1/12 text-center">{{ user.contactNumber }}</div>
+        <div class="w-1/12 text-center">{{ user.role }}</div>
+        <div class="w-2/12 text-center">
+          <span *ngIf="user.status === 'true'; else waiting">{{ 'Active' }}</span>
+          <ng-template #waiting>Waiting for Approval</ng-template>
+          <!-- Add a button to activate/deactivate the user -->
+          <button
+            mat-icon-button
+            [style.color]="user.status === 'true' ? 'green' : 'red'"
+            (click)="activateUser(user.id, user.status === 'false' ? 'true' : 'false')"
+          >
+            <mat-icon>check_circle</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

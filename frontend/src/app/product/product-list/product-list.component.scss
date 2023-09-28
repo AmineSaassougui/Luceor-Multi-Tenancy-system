@@ -1,0 +1,162 @@
+/* ... */
+.search-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.search-input {
+  flex: 1;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.search-button {
+  background-color: #0ea5e9;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.search-button .mat-icon {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.search-filters {
+  margin-top: 1rem;
+}
+
+.filter-input {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.filter-select {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem; /* Adjust margin as needed for spacing between cards */
+}
+
+.product-card {
+  flex: 0 0 calc(33.333% - 2rem); /* Adjust the width of each card */
+  max-width: calc(33.333% - 2rem); /* Adjust the max-width of each card */
+  margin: 1rem; /* Adjust margin as needed for spacing between cards */
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-description {
+  margin-top: 0.5rem;
+  color: #6b7280;
+}
+
+.card-details {
+  list-style: none;
+  padding: 0;
+}
+
+.card-details li {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.card-button {
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.view-details-button {
+  background-color: #0ea5e9;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.view-details-button:hover {
+  background-color: #0c87c1;
+}
+
+.find-more-cards {
+  margin-top: 1rem;
+}
+
+.find-more-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.find-more-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.find-more-paragraph {
+  margin-top: 0.5rem;
+  color: #6b7280;
+}
+
+.find-more-button {
+  background-color: #0ea5e9;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.find-more-button .mat-icon {
+  font-size: 1rem;
+  color: #ffffff;
+}
+/* ... */

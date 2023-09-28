@@ -1,0 +1,87 @@
+.login {
+  background-color: #ffffff;
+  &__page {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  &__row {
+    position: relative;
+    z-index: 2;
+  }
+}
+@media (min-width: 768px) {
+  .login {
+    &__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+/* Center the MatSnackBar message */
+.centered-snackbar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Add this to your signup page's CSS file */
+
+/* Apply background image and color degradation */
+.login__page {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Set initial position outside of the viewport and animate the logo */
+.login__hero a {
+  background-color: rgba(255, 255, 255, 0.33);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Set initial position outside of the viewport */
+  transform: translateY(-100%);
+  animation: dropLogo 1s ease forwards;
+}
+
+@keyframes dropLogo {
+  to {
+    /* Set the final position */
+    transform: translateY(0);
+  }
+}
+
+/* Ensure the image scales properly within the container */
+.login__hero a img {
+  max-width: 100%;
+}
+
+
+
+
+
+
+

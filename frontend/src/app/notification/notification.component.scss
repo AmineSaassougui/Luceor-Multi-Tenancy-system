@@ -1,0 +1,26 @@
+.notification {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+  color: #fff;
+  padding: 20px 30px; /* Increased padding */
+  border-radius: 4px;
+  z-index: 9999;
+  opacity: 0; /* Start with 0 opacity */
+  transition: opacity 0.3s ease-in-out; /* Add a fade-in/out transition */
+  font-size: 18px; /* Increased font size */
+}
+
+.notification.success {
+  background-color: #4caf50; /* Green background for success */
+}
+
+.notification.error {
+  background-color: #f44336; /* Red background for error */
+}
+
+.notification.show {
+  opacity: 1; /* Show the notification by changing opacity */
+}
